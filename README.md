@@ -1,2 +1,23 @@
-# AVRillo
-My work for the AVRillo SDLT task
+This project was built using Herd, Cursor and PHPStorm. Please clone the repository, set up a local environment for it and run npm dev to load Tailwind. Thank you for reviewing my work, the following are my notes I wrote out as I worked, explaining my process:
+
+
+
+Initially I asked Cursor for a mockup of a land tax calculator, just to try to skip UI stages as much as possible. It wanted to use the directory of /resources/views/sdlt/ for the index.blade.php, and then /resources/views/sdlt/partials/ for the components. I felt this was a little messy for this project, so I adjusted it to simply /resources/views/ and /resources/views/components/. On top of this it was using @includes but I felt it would be cleaner using tags such as <x-rates /> instead of @include('sdlt.partials.rates’), so I asked it to change those.
+
+The UI was rough, I did some very quick adjustments to the Tailwind classes just to make padding and margins look a bit better and decided to come back after it was working The form elements were repetitive in the code so I asked it to split those down into components to save me time doing so manually.
+
+Next I told it to mock up submission and calculation logic, however I fully expected this to go wrong somewhere and planned to unit test outputs and edge cases later using Pest. I had already noticed at this point it had missed some conditions of SDLT, such as the "Rates if you’re not a UK resident” and “Special rates” sections detailed at https://www.gov.uk/stamp-duty-land-tax/residential-property-rates
+
+I should note at this point that much of my verification outside of unit testing is firstly by just attempting to run it and seeing what errors appear, and otherwise manually reviewed by myself using the assistance of PHPStorm. It’s a very helpful text editor which highlights any potential issues and makes it much easier for me to manually review the AI’s output. I’ve been using it for years and swear by it.
+
+This logic was placed directly into the routes file and I felt that was very out of place. It was at this point I manually created the TaxController and moved the routing and logic over to there, calling the index and show methods. I did an initial test using a purchase amount of £5,000,000 in order to test the multiple bands. The calculator returned £513,750.00 SDLT, which was a good start since that matched HMRC’s calculator with the same settings.
+
+Next I wanted to get my tax rates out of the code and into a data format. I moved the rates over to TaxRateConfiguration.json, which is currently placed inside the resources folder. I then had Cursor adjust to read from that file instead and reran several tests to confirm numbers remained the same.
+
+Next I ran some tests against HMRC’s calculator to check that the results for first-time buyers and owners of additional properties made sense. They did, but I noticed that both tick boxes could be chosen, so I decided the next step was focusing on validation. Mainly disallowing checkboxes to clash like this, verifying inputs, and returning sensible errors upon failure.
+
+Once validation was done I wanted to move onto adding more edge cases and the scenarios AI had missed. Admittedly I’m inexperienced with SDLT, so given more time I’d have researched it further, but from what I can see at the time of typing this the cases the AI has missed is the 2% additive tax rate when the buyer is a non-UK resident, the difference between freehold and leasehold purchases, residential vs non-residential properties, and finally whether you’re purchasing the property as an individual or not (I believe this is a 3% additive surcharge, or 15% flat rate above £500,000?)
+
+I managed to add the non-UK resident modifier, however it was after this that I ran out of time. I started at 1:30pm and ended at 3:30pm, so I decided it was time to wrap up to get it submitted in time.
+
+If I had another hour, I would have researched non-residential purchases next and implemented those calculations next, followed by leasehold calculations. I won’t address the CSS since that wasn’t part of the task, but in a real world environment I’d commit more time to it. I’d also have done more unit testing (as in any unit testing). I typically use a bit more of a TDD model to my development but under the time pressure I ended up doing no unit tests, and would love to have started testing it more thoroughly after I implemented the remaining functionality.
