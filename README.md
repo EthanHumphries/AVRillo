@@ -14,6 +14,10 @@ Results in £20,000 SDLT (0% between £0 and £125,000, 2% between £125,000 and
 
 Results in £46,000 SDLT (2% between £0 and £125,000, 4% between £125,000 and £250,000, 7% between £250,000 and £800,000)
 
+£400,000 purchase price as a first-time buyer and a non-UK resident:
+
+Results in £13,000 SDLT (2% between £0 and £300,000, 7% between £300,000 and £400,000)
+
 
 Additionally please see /resources/TaxRateConfigurations.json for where I stored my tax bands. Thank you for reviewing my work, the following are my notes I wrote out as I worked, explaining my process:
 
