@@ -1,4 +1,21 @@
-This project was built using Herd, Cursor and PHPStorm. Please clone the repository, set up a local environment for it and run npm dev to load Tailwind. Additionally please see /resources/TaxRateConfigurations.json for where I stored my tax bands. Thank you for reviewing my work, the following are my notes I wrote out as I worked, explaining my process:
+This project was built using Herd, Cursor and PHPStorm. Please clone the repository, set up a local environment for it and run npm dev to load Tailwind.
+
+Here are several calculation examples:
+
+£400,000 purchase price as a first-time buyer:
+
+Results in £5000 SDLT (0% between £0 and £300,000 due to first-time buyer relief, 5% between £300,000 and £400,000)
+
+£600,000 purchase price, no first-time buyer relief:
+
+Results in £20,000 SDLT (0% between £0 and £125,000, 2% between £125,000 and £250,000, 5% between £250,000 and £600,000)
+
+£800,000 purchase price as a non-UK resident:
+
+Results in £46,000 SDLT (2% between £0 and £125,000, 4% between £125,000 and £250,000, 7% between £250,000 and £800,000)
+
+
+Additionally please see /resources/TaxRateConfigurations.json for where I stored my tax bands. Thank you for reviewing my work, the following are my notes I wrote out as I worked, explaining my process:
 
 
 
