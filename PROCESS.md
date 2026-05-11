@@ -20,4 +20,14 @@ Once validation was done I wanted to move onto adding more edge cases and the sc
 
 I managed to add the non-UK resident modifier, however it was after this that I ran out of time. I started at 1:30pm and ended at 3:30pm, so I decided it was time to wrap up to get it submitted in time.
 
-If I had another hour, I would have researched non-residential purchases next and implemented those calculations next, followed by leasehold calculations. I won’t address the CSS since that wasn’t part of the task, but in a real world environment I’d commit more time to it. I’d also have done more unit testing (as in any unit testing). I typically use a bit more of a TDD model to my development but under the time pressure I ended up doing no unit tests, and would love to have started testing it more thoroughly after I implemented the remaining functionality.
+
+
+To answer the questions posed in the task:
+
+This truly took me about 2 hours. I set a timer for 1 hour 55 minutes, and when that went off I took 5 minutes to wrap up.
+
+I used Cursor, alongside a little bit of JetBrain's AI inside PHPStorm. I feel I've given several examples I've rewritten above, but one such example would be where I felt the logic being in web.php made no sense, so I instead manually created the TaxController and stored the logic in there.
+
+I verified the maths by comparing against HMRC's calculator, googling and reading up on tax bands (not using the AI overview, I wanted to be sure), and sometimes simply just with a calculator using my existing bands from my JSON to confirm I wasn't crazy when the numbers came out wrong a couple times.
+
+If I had another hour, I would have researched non-residential purchases next and implemented those calculations next, maybe followed by leasehold calculations if I had the time. I won’t address the CSS since that wasn’t part of the task, but in a real world environment I’d commit more time to it. I’d maybe have also have done more unit testing (as in any unit testing) but if I'm honest I don't think I would have gotten around to it in just one hour. I typically use a bit more of a TDD model to my development but under the time pressure I ended up doing no unit tests, and would love to have started testing it more thoroughly after I implemented the remaining functionality.
