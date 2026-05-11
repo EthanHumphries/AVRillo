@@ -1,0 +1,20 @@
+{
+  "standard": [
+    { "from": 0, "to": 125000, "rate": 0 },
+    { "from": 125000, "to": 250000, "rate": 2 },
+    { "from": 250000, "to": 925000, "rate": 5 },
+    { "from": 925000, "to": 1500000, "rate": 10 },
+    { "from": 1500000, "to": null, "rate": 12 }
+  ],
+  "first_time_buyer": [
+    { "from": 0, "to": 300000, "rate": 0 },
+    { "from": 300000, "to": 500000, "rate": 5 }
+  ],
+  "additional_property": [
+    { "from": 0, "to": 125000, "rate": 5 },
+    { "from": 125000, "to": 250000, "rate": 7 },
+    { "from": 250000, "to": 925000, "rate": 10 },
+    { "from": 925000, "to": 1500000, "rate": 15 },
+    { "from": 1500000, "to": null, "rate": 17 }
+  ]
+}
