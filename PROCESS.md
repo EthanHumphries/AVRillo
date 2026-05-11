@@ -2,7 +2,7 @@ To answer the questions posed in the task:
 
 This truly took me about 2 hours. I set a timer for 1 hour 55 minutes, and when that went off I took 5 minutes to wrap up.
 
-I used Cursor, alongside a little bit of JetBrain's AI inside PHPStorm. I've detailed several examples where I rewrote my output within README.md, but one such example would be where I felt the logic being in web.php made no sense, so I instead manually created the TaxController and stored the logic in there.
+I used Cursor, alongside a little bit of JetBrain's AI inside PHPStorm. I've detailed several examples where I rewrote my output within README.md, but one such example would be where I felt the logic being in web.php made no sense. Cursor wanted all of the SDLT calculation process in web.php. I felt that was extremely messy and instead manually created the TaxController, moving the logic over to that file instead.
 
 I verified the maths by comparing against HMRC's calculator, googling and reading up on tax bands (not using the AI overview, I wanted to be sure), and sometimes simply just with a calculator using my existing bands from my JSON to confirm I wasn't crazy when the numbers came out wrong a couple times.
 
