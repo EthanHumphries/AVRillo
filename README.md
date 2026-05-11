@@ -1,4 +1,4 @@
-This project was built using Herd, Cursor and PHPStorm. Please clone the repository, set up a local environment for it and run npm dev to load Tailwind. Thank you for reviewing my work, the following are my notes I wrote out as I worked, explaining my process:
+This project was built using Herd, Cursor and PHPStorm. Please clone the repository, set up a local environment for it and run npm dev to load Tailwind. Additionally please see /resources/TaxRateConfigurations.json for where I stored my tax bands. Thank you for reviewing my work, the following are my notes I wrote out as I worked, explaining my process:
 
 
 
